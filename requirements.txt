@@ -1,0 +1,8 @@
+myst-parser
+sphinx
+sphinx_rtd_theme
+sphinx-autobuild
+sphinx-book-theme
+sphinx-collapse
+sphinx-copybutton
+sphinx-togglebutton

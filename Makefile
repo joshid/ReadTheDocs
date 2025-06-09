@@ -5,7 +5,7 @@
 SPHINXOPTS    ?=
 SPHINXBUILD   ?= sphinx-build
 SOURCEDIR     = .
-BUILDDIR      = _build
+BUILDDIR      = $READTHEDOCS_OUTPUT
 
 help:
 	@echo "Copy paste this:"
@@ -23,7 +23,7 @@ livehtml: clean
 
 # Put it first so that "make" without argument is like "make html"
 html:
-	$(SPHINXBUILD) -b html "$(SOURCEDIR)" "$READTHEDOCS_OUTPUT/html" $(SPHINXOPTS) $(O)
+	$(SPHINXBUILD) -b html "$(SOURCEDIR)" "$(BUILDDIR)/html" $(SPHINXOPTS) $(O)
 
 # Clean build files
 clean:

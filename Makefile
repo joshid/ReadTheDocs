@@ -5,7 +5,7 @@
 SPHINXOPTS    ?=
 SPHINXBUILD   ?= sphinx-build
 SOURCEDIR     = .
-BUILDDIR      = _build
+BUILDDIR      = $(READTHEDOCS_OUTPUT)
 
 help:
 	@echo "Copy paste this:"

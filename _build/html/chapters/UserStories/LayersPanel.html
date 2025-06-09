@@ -1,0 +1,696 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Layers Panel User Story &#8212; FlightClaim  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx_collapse.css?v=226d88b4" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/UserStories/LayersPanel';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">FlightClaim  documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../UserStories.html">User Stories</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/chapters/UserStories/LayersPanel.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Layers Panel User Story</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#user-personas">User Personas</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-features">Key Features</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#viewing-all-layers">1. Viewing All Layers</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#toggling-visibility">2. Toggling Visibility</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#selecting-elements">3. Selecting Elements</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#renaming-layers">4. Renaming Layers</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deleting-layers">5. Deleting Layers</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visual-feedback">6. Visual Feedback</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interaction-scenarios">Interaction Scenarios</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scenario-1-creating-a-multi-device-screenshot">Scenario 1: Creating a Multi-Device Screenshot</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scenario-2-managing-text-overlays">Scenario 2: Managing Text Overlays</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scenario-3-complex-layout-organization">Scenario 3: Complex Layout Organization</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#technical-behavior">Technical Behavior</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#selection-synchronization">Selection Synchronization</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visibility-rules">Visibility Rules</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#naming-conventions">Naming Conventions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#render-order">Render Order</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#accessibility-considerations">Accessibility Considerations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#future-enhancements">Future Enhancements</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#success-metrics">Success Metrics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#testing-considerations">Testing Considerations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#unit-tests-test">Unit Tests (@Test)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ui-tests">UI Tests</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implementation-notes">Implementation Notes</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="layers-panel-user-story">
+<h1>Layers Panel User Story<a class="headerlink" href="#layers-panel-user-story" title="Link to this heading">#</a></h1>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading">#</a></h2>
+<p>As a designer creating App Store promotional screenshots, I want a layers panel to manage all elements on my canvas so that I can easily control visibility, organize my design, and quickly select elements without hunting through the canvas.</p>
+</section>
+<section id="user-personas">
+<h2>User Personas<a class="headerlink" href="#user-personas" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Sarah</strong>: A mobile app designer creating promotional screenshots for multiple device sizes</p></li>
+<li><p><strong>Marcus</strong>: A marketing designer who needs to create localized screenshots in different languages</p></li>
+<li><p><strong>Emma</strong>: A freelance designer working on multiple client projects with complex layouts</p></li>
+</ul>
+</section>
+<section id="key-features">
+<h2>Key Features<a class="headerlink" href="#key-features" title="Link to this heading">#</a></h2>
+<section id="viewing-all-layers">
+<h3>1. Viewing All Layers<a class="headerlink" href="#viewing-all-layers" title="Link to this heading">#</a></h3>
+<p><strong>Given</strong> I have multiple elements on my canvas (devices, text, images)<br />
+<strong>When</strong> I look at the left sidebar<br />
+<strong>Then</strong> I see a hierarchical list of all elements in their render order (devices at bottom, text at top)</p>
+</section>
+<section id="toggling-visibility">
+<h3>2. Toggling Visibility<a class="headerlink" href="#toggling-visibility" title="Link to this heading">#</a></h3>
+<p><strong>Given</strong> I have a layer visible on the canvas<br />
+<strong>When</strong> I click the checkbox next to the layer name<br />
+<strong>Then</strong> the element disappears from the canvas but remains in the layers list<br />
+<strong>And</strong> the checkbox shows an empty square<br />
+<strong>And</strong> I cannot select the hidden element by clicking on the canvas</p>
+</section>
+<section id="selecting-elements">
+<h3>3. Selecting Elements<a class="headerlink" href="#selecting-elements" title="Link to this heading">#</a></h3>
+<p><strong>Given</strong> I have multiple elements on my canvas<br />
+<strong>When</strong> I click on a layer in the panel<br />
+<strong>Then</strong> the element is selected on the canvas with a highlight border<br />
+<strong>And</strong> the properties panel shows the element’s settings<br />
+<strong>And</strong> the layer row shows a selection highlight</p>
+</section>
+<section id="renaming-layers">
+<h3>4. Renaming Layers<a class="headerlink" href="#renaming-layers" title="Link to this heading">#</a></h3>
+<p><strong>Given</strong> I want to organize my layers with meaningful names<br />
+<strong>When</strong> I double-click on a layer name<br />
+<strong>Then</strong> the name becomes editable<br />
+<strong>And</strong> I can type a new name<br />
+<strong>And</strong> pressing Enter or clicking away saves the change</p>
+</section>
+<section id="deleting-layers">
+<h3>5. Deleting Layers<a class="headerlink" href="#deleting-layers" title="Link to this heading">#</a></h3>
+<p><strong>Given</strong> I have selected a layer<br />
+<strong>When</strong> I click the trash icon that appears on selection<br />
+<strong>Then</strong> the element is removed from both the canvas and layers panel<br />
+<strong>And</strong> the selection is cleared</p>
+</section>
+<section id="visual-feedback">
+<h3>6. Visual Feedback<a class="headerlink" href="#visual-feedback" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Layer Types</strong>: Each layer shows an icon indicating its type:</p>
+<ul>
+<li><p>📱 <code class="docutils literal notranslate"><span class="pre">rectangle.on.rectangle</span></code> for device frames</p></li>
+<li><p>🔤 <code class="docutils literal notranslate"><span class="pre">textformat</span></code> for text elements</p></li>
+<li><p>🖼️ <code class="docutils literal notranslate"><span class="pre">photo</span></code> for images</p></li>
+</ul>
+</li>
+<li><p><strong>Alternating Rows</strong>: Even rows have a subtle background for better readability</p></li>
+<li><p><strong>Selection State</strong>: Selected layers have a blue tinted background</p></li>
+<li><p><strong>Empty State</strong>: When no layers exist, helpful text guides users to add elements</p></li>
+</ul>
+</section>
+</section>
+<section id="interaction-scenarios">
+<h2>Interaction Scenarios<a class="headerlink" href="#interaction-scenarios" title="Link to this heading">#</a></h2>
+<section id="scenario-1-creating-a-multi-device-screenshot">
+<h3>Scenario 1: Creating a Multi-Device Screenshot<a class="headerlink" href="#scenario-1-creating-a-multi-device-screenshot" title="Link to this heading">#</a></h3>
+<p>Sarah is creating promotional screenshots showing her app on multiple devices:</p>
+<ol class="arabic simple">
+<li><p>She adds an iPhone 16 Plus to the canvas</p></li>
+<li><p>The layers panel shows “iPhone 16 Plus” with a device icon</p></li>
+<li><p>She adds a screenshot to the device</p></li>
+<li><p>She duplicates the setup and changes to iPad</p></li>
+<li><p>She renames the layers to “iPhone - Home Screen” and “iPad - Home Screen”</p></li>
+<li><p>She temporarily hides the iPad while working on iPhone positioning</p></li>
+</ol>
+</section>
+<section id="scenario-2-managing-text-overlays">
+<h3>Scenario 2: Managing Text Overlays<a class="headerlink" href="#scenario-2-managing-text-overlays" title="Link to this heading">#</a></h3>
+<p>Marcus needs to add promotional text in multiple languages:</p>
+<ol class="arabic simple">
+<li><p>He adds text saying “Revolutionary New Features”</p></li>
+<li><p>The layer appears as “Text Layer 1”</p></li>
+<li><p>He renames it to “English - Hero Text”</p></li>
+<li><p>He duplicates it and changes the text to Spanish</p></li>
+<li><p>He uses visibility toggles to switch between languages</p></li>
+<li><p>He can quickly select text elements from the panel without clicking small text on canvas</p></li>
+</ol>
+</section>
+<section id="scenario-3-complex-layout-organization">
+<h3>Scenario 3: Complex Layout Organization<a class="headerlink" href="#scenario-3-complex-layout-organization" title="Link to this heading">#</a></h3>
+<p>Emma is working on a screenshot with many elements:</p>
+<ol class="arabic simple">
+<li><p>She has 3 devices, 5 text elements, and 2 decorative images</p></li>
+<li><p>She uses descriptive names: “iPhone - Onboarding”, “CTA Button Text”, “Background Pattern”</p></li>
+<li><p>She hides background elements while positioning foreground text</p></li>
+<li><p>She quickly finds and deletes outdated elements using the layers panel</p></li>
+<li><p>She double-checks all elements are visible before exporting</p></li>
+</ol>
+</section>
+</section>
+<section id="technical-behavior">
+<h2>Technical Behavior<a class="headerlink" href="#technical-behavior" title="Link to this heading">#</a></h2>
+<section id="selection-synchronization">
+<h3>Selection Synchronization<a class="headerlink" href="#selection-synchronization" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Clicking a layer selects the corresponding canvas element</p></li>
+<li><p>Selecting an element on canvas highlights its layer</p></li>
+<li><p>Only one element can be selected at a time across all types</p></li>
+</ul>
+</section>
+<section id="visibility-rules">
+<h3>Visibility Rules<a class="headerlink" href="#visibility-rules" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Hidden elements cannot be selected on canvas</p></li>
+<li><p>Hidden elements don’t respond to clicks or drags</p></li>
+<li><p>Visibility state persists when saving/loading documents</p></li>
+</ul>
+</section>
+<section id="naming-conventions">
+<h3>Naming Conventions<a class="headerlink" href="#naming-conventions" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Device frames default to their device type name</p></li>
+<li><p>Text layers are numbered: “Text Layer 1”, “Text Layer 2”</p></li>
+<li><p>Images use their filename or “Image 1”, “Image 2” if unnamed</p></li>
+</ul>
+</section>
+<section id="render-order">
+<h3>Render Order<a class="headerlink" href="#render-order" title="Link to this heading">#</a></h3>
+<p>Layers are displayed and rendered in this order (bottom to top):</p>
+<ol class="arabic simple">
+<li><p>Device frames (bottom layer)</p></li>
+<li><p>Image elements (middle layer)</p></li>
+<li><p>Text elements (top layer)</p></li>
+</ol>
+</section>
+</section>
+<section id="accessibility-considerations">
+<h2>Accessibility Considerations<a class="headerlink" href="#accessibility-considerations" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>All interactive elements have descriptive help tags</p></li>
+<li><p>Keyboard navigation through layers list</p></li>
+<li><p>Visual feedback for all interactions</p></li>
+<li><p>Clear icons that work in both light and dark themes</p></li>
+</ul>
+</section>
+<section id="future-enhancements">
+<h2>Future Enhancements<a class="headerlink" href="#future-enhancements" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Drag and drop reordering within element types</p></li>
+<li><p>Layer grouping/folders for complex projects</p></li>
+<li><p>Lock layers to prevent accidental changes</p></li>
+<li><p>Duplicate layer functionality</p></li>
+<li><p>Multi-select for bulk operations</p></li>
+</ul>
+</section>
+<section id="success-metrics">
+<h2>Success Metrics<a class="headerlink" href="#success-metrics" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Users can find and select elements 3x faster than clicking on canvas</p></li>
+<li><p>90% of users successfully use visibility toggles in their first session</p></li>
+<li><p>Reduced accidental element deletion by 50% due to explicit delete action</p></li>
+<li><p>Increased project organization with 80% of users renaming at least one layer</p></li>
+</ul>
+</section>
+<section id="testing-considerations">
+<h2>Testing Considerations<a class="headerlink" href="#testing-considerations" title="Link to this heading">#</a></h2>
+<section id="unit-tests-test">
+<h3>Unit Tests (&#64;Test)<a class="headerlink" href="#unit-tests-test" title="Link to this heading">#</a></h3>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="p">@</span><span class="n">Test</span><span class="p">(</span><span class="s">&quot;Layer visibility toggle updates element state&quot;</span><span class="p">)</span>
+<span class="kd">func</span><span class="w"> </span><span class="nf">testVisibilityToggle</span><span class="p">()</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nv">appState</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">AppState</span><span class="p">()</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nv">device</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">DeviceFrame</span><span class="p">()</span>
+<span class="w">    </span><span class="n">appState</span><span class="p">.</span><span class="n">devices</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">device</span><span class="p">)</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="p">#</span><span class="n">expect</span><span class="p">(</span><span class="n">device</span><span class="p">.</span><span class="n">isVisible</span><span class="w"> </span><span class="p">==</span><span class="w"> </span><span class="kc">true</span><span class="p">)</span>
+<span class="w">    </span><span class="n">appState</span><span class="p">.</span><span class="n">toggleVisibility</span><span class="p">(</span><span class="k">for</span><span class="p">:</span><span class="w"> </span><span class="n">device</span><span class="p">.</span><span class="n">id</span><span class="p">)</span>
+<span class="w">    </span><span class="p">#</span><span class="n">expect</span><span class="p">(</span><span class="n">appState</span><span class="p">.</span><span class="n">devices</span><span class="p">.</span><span class="bp">first</span><span class="p">?.</span><span class="n">isVisible</span><span class="w"> </span><span class="p">==</span><span class="w"> </span><span class="kc">false</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="p">@</span><span class="n">Test</span><span class="p">(</span><span class="s">&quot;Layer deletion removes element and clears selection&quot;</span><span class="p">)</span>
+<span class="kd">func</span><span class="w"> </span><span class="nf">testLayerDeletion</span><span class="p">()</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nv">appState</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">AppState</span><span class="p">()</span>
+<span class="w">    </span><span class="n">appState</span><span class="p">.</span><span class="n">addTextElement</span><span class="p">()</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nv">textId</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">appState</span><span class="p">.</span><span class="n">textElements</span><span class="p">.</span><span class="bp">first</span><span class="p">?.</span><span class="n">id</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="p">#</span><span class="n">expect</span><span class="p">(</span><span class="n">appState</span><span class="p">.</span><span class="n">selectedTextId</span><span class="w"> </span><span class="p">==</span><span class="w"> </span><span class="n">textId</span><span class="p">)</span>
+<span class="w">    </span><span class="n">appState</span><span class="p">.</span><span class="n">deleteElement</span><span class="p">(</span><span class="n">id</span><span class="p">:</span><span class="w"> </span><span class="n">textId</span><span class="p">!)</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="p">#</span><span class="n">expect</span><span class="p">(</span><span class="n">appState</span><span class="p">.</span><span class="n">textElements</span><span class="p">.</span><span class="bp">isEmpty</span><span class="p">)</span>
+<span class="w">    </span><span class="p">#</span><span class="n">expect</span><span class="p">(</span><span class="n">appState</span><span class="p">.</span><span class="n">selectedTextId</span><span class="w"> </span><span class="p">==</span><span class="w"> </span><span class="kc">nil</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="p">@</span><span class="n">Test</span><span class="p">(</span><span class="s">&quot;Auto-naming generates sequential numbers&quot;</span><span class="p">,</span><span class="w"> </span>
+<span class="w">      </span><span class="n">arguments</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">])</span>
+<span class="kd">func</span><span class="w"> </span><span class="nf">testLayerAutoNaming</span><span class="p">(</span><span class="bp">count</span><span class="p">:</span><span class="w"> </span><span class="nb">Int</span><span class="p">)</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nv">appState</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">AppState</span><span class="p">()</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="mf">1.</span><span class="p">..</span><span class="bp">count</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">appState</span><span class="p">.</span><span class="n">addTextElement</span><span class="p">()</span>
+<span class="w">        </span><span class="p">#</span><span class="n">expect</span><span class="p">(</span><span class="n">appState</span><span class="p">.</span><span class="n">textElements</span><span class="p">.</span><span class="bp">last</span><span class="p">?.</span><span class="n">name</span><span class="w"> </span><span class="p">==</span><span class="w"> </span><span class="s">&quot;Text Layer </span><span class="si">\(</span><span class="n">i</span><span class="si">)</span><span class="s">&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="ui-tests">
+<h3>UI Tests<a class="headerlink" href="#ui-tests" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Verify double-click enables name editing</p></li>
+<li><p>Confirm selection synchronization between panel and canvas</p></li>
+<li><p>Test visibility toggle affects canvas rendering</p></li>
+<li><p>Validate keyboard navigation through layers</p></li>
+</ul>
+</section>
+</section>
+<section id="implementation-notes">
+<h2>Implementation Notes<a class="headerlink" href="#implementation-notes" title="Link to this heading">#</a></h2>
+<p>The layers panel leverages SwiftUI’s declarative nature and the Observation framework for automatic UI updates. The implementation maintains clean separation between UI (LayersPanel, LayerRow) and business logic (AppState layer management methods), making it highly testable and maintainable.</p>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#user-personas">User Personas</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-features">Key Features</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#viewing-all-layers">1. Viewing All Layers</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#toggling-visibility">2. Toggling Visibility</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#selecting-elements">3. Selecting Elements</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#renaming-layers">4. Renaming Layers</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deleting-layers">5. Deleting Layers</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visual-feedback">6. Visual Feedback</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interaction-scenarios">Interaction Scenarios</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scenario-1-creating-a-multi-device-screenshot">Scenario 1: Creating a Multi-Device Screenshot</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scenario-2-managing-text-overlays">Scenario 2: Managing Text Overlays</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scenario-3-complex-layout-organization">Scenario 3: Complex Layout Organization</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#technical-behavior">Technical Behavior</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#selection-synchronization">Selection Synchronization</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visibility-rules">Visibility Rules</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#naming-conventions">Naming Conventions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#render-order">Render Order</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#accessibility-considerations">Accessibility Considerations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#future-enhancements">Future Enhancements</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#success-metrics">Success Metrics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#testing-considerations">Testing Considerations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#unit-tests-test">Unit Tests (@Test)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ui-tests">UI Tests</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implementation-notes">Implementation Notes</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Jose N. Hidalgo
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025 Jose N. Hidalgo.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
